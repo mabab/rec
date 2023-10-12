@@ -1,0 +1,26 @@
+
+version: '3.8'
+
+networks:
+  allright_default:
+    external: true
+
+services:
+  record-image:
+    build:
+      context: ./
+    platform: linux/amd64
+    volumes:
+      - ./app:/usr/src/record/app
+    environment:
+      - REDIS_HOST=local-redis
+      - REDIS_PORT=6379
+      - REDIS_PASSWORD=sOmE_sEcUrE_pAsS
+      - REDIS_RECORD_QUEUE_KEY=classroom-record-queue
+      - FRONTEND_URL=http://frontend:4200
+      - BACKEND_URL=http://backend:3005/api/v1
+      - WORKER_POOL_SIZE=10
+    command: node index.js
+
+    networks:
+      - allright_default

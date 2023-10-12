@@ -1,0 +1,25 @@
+{
+  "name": "allright-record-classroom",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./app/index.js",
+  "type": "module",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.306.0",
+    "@aws-sdk/lib-storage": "^3.306.0",
+    "@ffmpeg/core": "^0.11.0",
+    "@ffmpeg/ffmpeg": "^0.11.6",
+    "ioredis": "^5.3.1",
+    "node-fetch": "^3.3.1",
+    "puppeteer": "^19.8.3",
+    "puppeteer-stream": "^3.0.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "2.8.7"
+  }
+}
